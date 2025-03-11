@@ -21,7 +21,6 @@ public class App {
     private String streamName = getStreamName();
     Logger logger = new LoggerStandard(streamName);
     MiddlewareDataStream<JumpPulseData> dataStream;
-
     LatestValuesSaver latestValuesSaver = new LatestValuesSaverMap();
 
     @SuppressWarnings("unchecked")
@@ -81,7 +80,7 @@ public class App {
 
         int currentValue = sensorData.value();
         int oldValue = 0;
-        ;
+        
         if (latestSensorData != null) {
             oldValue = latestSensorData.value();
         }
